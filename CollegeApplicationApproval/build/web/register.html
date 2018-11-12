@@ -1,0 +1,101 @@
+<html>
+    <head>
+        
+         <script>
+            function registersuccess()
+            {
+                var x=document.getElementById("passone").value;
+                var y=document.getElementById("passtwo").value;
+                if(x==y)
+                    {
+                        var url="submit.html";
+                        window.location.replace(url);
+                    }
+                else{
+                    alert("Confirm Password NOT Matched");
+                    }
+                
+            }
+            function up()
+            {
+             var x=document.getElementById("fname");
+                var y=document.getElementById("lname");
+                x.value=x.value.toUpperCase();
+                y.value=y.value.toUpperCase();
+            }
+        </script>
+
+        <style> 
+             body 
+            {
+                     background-image: url(ew0V5jf.jpg)
+            }
+            .middle
+            {
+                height: 750px;
+            }
+           
+             .div01
+            {
+                float:left;
+                border-radius:15px;
+                background-color: white;
+                height: 640px;
+                width:400px;
+                margin-left: 430px;
+                margin-top:10px;
+                font-size:20px;
+            }
+            .div01 input
+            {
+                margin-left:30px;
+                margin-top:20px;
+                padding:10px 80px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+       <div class="container">
+    <B><font color= white>COLLEGE APPLICATION APPROVAL</font></B> 
+                <nav style="float:right;">
+                   
+                   <a href="login.html"><b><font color= white>LOGIN</font></b></a>
+                   <a href="register.html"><b><font color= white> REGSTER</font></b></a>
+               </nav>
+           </div><hr>
+           <div class="div3">
+            <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: white;margin-top: 0;text-align: center;border-bottom-right-radius:  40px;">Register</p>
+           </div>
+           <div class="middle">
+               <div class="div01">
+                    <form method="get">
+                    <img src="images.png" style="height:80px;width:80px;margin-left:60px;margin-top:10px;float:left">
+                    <h1 style="float:left;margin-left:30px;margin-top:30px;color:black">REGISTER</h1>
+                    <input type="text" id="fname" placeholder="First Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'" onkeyup="up()">
+                    <input type="text" id="lname" placeholder="Last Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'" onkeyup="up()">
+                    <input type="radio" name="gender" style="margin-left:30px;" required>Male<input type="radio" name="gender" required>Female
+                    <input type="text" placeholder="Username" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
+                    <input type="password" id="passone" placeholder="Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
+                    <input type="password" id="passtwo" placeholder="Confirm Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
+                    <input type="email" placeholder="Email" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
+                    <select style="padding: 10px 80px;margin-top: 10;margin-left: 30">
+                        <option>Branch</option>
+                        <option>CSE</option>
+                        <option>ECE</option>
+                        <option>CIVIL</option>
+                    
+                    </select><br>
+                      <input type="submit" value="Register" style="border-radius: 60px;border: 1px; color:white;background:red;padding:16px 130px;font-family:inherit;font-size:20px;">
+                    </form>
+                </div>
+
+          
+        
+           
+           
+        </div> 
+    </body>
+</html>
