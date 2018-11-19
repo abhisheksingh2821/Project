@@ -1,26 +1,12 @@
 
 <html>
     <head>
-        <script>
-            function loginsuccess()
-            {
-                var x = document.getElementById("input1").value;
-                var y = document.getElementById("input2").value;
-                if(x=="abhishek" && y==123456)
-                    {
-                        var url="home.html";
-                        window.location.replace(url);
-                    
-                    }
-                else
-                    alert("INVALID Username or Password");
-            }
-        </script>
-        <link type="text/css" rel="stylesheet" href="style.css">
+       
+      
         <style>
             body 
             {
-                     background-image: url(library_book.jpg)
+                     background-image: url(images1.jpg)
             }
             .middle
             {
@@ -55,7 +41,7 @@
                <nav style="float:right;">
                    
                    <a href="index.html"><b><font color= brown>LOGIN</font></b></a>
-                   <a href="register.html"><b><font color= brown>  REGSTER</font></b></a>
+                   <a href="register.html"><b><font color= brown>  REGISTER</font></b></a>
                </nav>
            </div><hr>
            <div class="middle">
@@ -65,12 +51,12 @@
                <div class="div01">
                       <img src="images.png" style="height: 120;width:120;margin-top:20px;margin-left:110;">
                         <h3 style="margin-left:60px">Username or Email</h3>
-                    <form method="get">
-                        <input type="text"  id="input1" style="margin-left: 60px;font-size: 20px;" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
+                    <form method="post" action="login">
+                        <input type="text"  id="input1" name="uname" style="margin-left: 60px;font-size: 20px;" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'">
                     <h3 style="margin-left:60px">Password</h3>
-                    <input type="password" id="input2" style="margin-left: 60px;font-size: 20px" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'"><br>
+                    <input type="password" id="input2" name="pwd" style="margin-left: 60px;font-size: 20px" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'"><br>
                     <input type="checkbox" style="margin-left: 60px;size: 20px;margin-top: 20px">Remember<br><br>
-                   <input type="button" onclick="loginsuccess()"value="Login" style="background-color:red;color:white;text-decoration:none;font-size:20px;margin-left:40px;padding:16px 130px;border: 1px;border-radius:60px"></form>
+                   <input type="submit" value="Login" style="background-color:red;color:white;text-decoration:none;font-size:20px;margin-left:40px;padding:16px 130px;border: 1px;border-radius:60px"></form>
                
                    <a href="#"><font color= black>Forgot password?</font></a>
                     <a href="register.html"><font color= black>Sign Up?</font></a><br>

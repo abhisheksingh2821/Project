@@ -4,16 +4,13 @@
          <script>
             function registersuccess()
             {
+                
                 var x=document.getElementById("passone").value;
                 var y=document.getElementById("passtwo").value;
-                if(x==y)
-                    {
-                        var url="submit.html";
-                        window.location.replace(url);
-                    }
-                else{
-                    alert("Confirm Password NOT Matched");
-                    }
+                if(x!=y)
+                {
+                   alert("Confirm Password NOT Matched");
+                }
                 
             }
             function up()
@@ -23,6 +20,7 @@
                 x.value=x.value.toUpperCase();
                 y.value=y.value.toUpperCase();
             }
+           
         </script>
 
         <style> 
@@ -62,8 +60,8 @@
     <B><font color= white>COLLEGE APPLICATION APPROVAL</font></B> 
                 <nav style="float:right;">
                    
-                   <a href="login.html"><b><font color= white>LOGIN</font></b></a>
-                   <a href="register.html"><b><font color= white> REGSTER</font></b></a>
+                   <a href="index.html"><b><font color= white>LOGIN</font></b></a>
+                   <a href="register.html"><b><font color= white> REGISTER</font></b></a>
                </nav>
            </div><hr>
            <div class="div3">
@@ -71,24 +69,18 @@
            </div>
            <div class="middle">
                <div class="div01">
-                    <form method="get">
+                   <form method="post" action="register">
                     <img src="images.png" style="height:80px;width:80px;margin-left:60px;margin-top:10px;float:left">
                     <h1 style="float:left;margin-left:30px;margin-top:30px;color:black">REGISTER</h1>
-                    <input type="text" id="fname" placeholder="First Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'" onkeyup="up()">
-                    <input type="text" id="lname" placeholder="Last Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'" onkeyup="up()">
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey   '" onkeyup="up()">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'" onkeyup="up()">
                     <input type="radio" name="gender" style="margin-left:30px;" required>Male<input type="radio" name="gender" required>Female
-                    <input type="text" placeholder="Username" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
-                    <input type="password" id="passone" placeholder="Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
-                    <input type="password" id="passtwo" placeholder="Confirm Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
-                    <input type="email" placeholder="Email" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='lightgrey'">
-                    <select style="padding: 10px 80px;margin-top: 10;margin-left: 30">
-                        <option>Branch</option>
-                        <option>CSE</option>
-                        <option>ECE</option>
-                        <option>CIVIL</option>
-                    
-                    </select><br>
-                      <input type="submit" value="Register" style="border-radius: 60px;border: 1px; color:white;background:red;padding:16px 130px;font-family:inherit;font-size:20px;">
+                          <input type="text" name="uname" placeholder="Username" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'">
+                    <input type="password"id ="passone" name="passone" placeholder="Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'">
+                    <input type="password" id = "passtwo" name="passtwo" placeholder="Confirm Password" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'">
+                    <input type="email" name="email" onmouseover = "registersuccess()" placeholder="Email" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'">
+                    <input type="text" name="city" placeholder="Your City" required onfocus="style.background='firebrick';style.color='white'" onblur="style.background='grey'" onkeyup="up()"><br>
+                    <input type="submit" value="Register"  style="border-radius: 60px;border: 1px; color:white;background:red;padding:16px 130px;font-family:inherit;font-size:20px;">
                     </form>
                 </div>
 
