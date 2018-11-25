@@ -13,13 +13,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import modal.LoginDao;
 
 /**
  *
  * @author Abhishek Singh
  */
-public class login extends HttpServlet {
+public class logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,31 +32,11 @@ public class login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        System.out.println("abhi");
-         PrintWriter out = response.getWriter();  
-          
-    String n=request.getParameter("uname");  
-    String p=request.getParameter("pwd");  
-          
-    if(LoginDao.validate(n, p)){  
-        HttpSession session = request.getSession();
-        session.setAttribute("uname",n);
-        RequestDispatcher rd=request.getRequestDispatcher("home.jsp");  
-        rd.forward(request,response);  
-    }  
-    else{  
-         out.println("<script type=\"text/javascript\">");
-       out.println("alert('User or password incorrect');");
-       out.println("</script>"); 
-        RequestDispatcher rd=request.getRequestDispatcher("index.html");  
-        rd.include(request,response);  
-    }  
-          
-    out.close();  
-    }  
- 
-        
-        
+        HttpSession session=request.getSession();  
+            session.invalidate();
+            RequestDispatcher rd = request.getRequestDispatcher("/index.html");
+            rd.forward(request,response);
+    }
     
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

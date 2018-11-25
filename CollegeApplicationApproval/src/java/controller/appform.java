@@ -7,19 +7,20 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import modal.LoginDao;
 
 /**
  *
  * @author Abhishek Singh
  */
-public class login extends HttpServlet {
+public class appform extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,32 +34,57 @@ public class login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        System.out.println("abhi");
-         PrintWriter out = response.getWriter();  
+       
+        
+        
+        PrintWriter out = response.getWriter();  
           
-    String n=request.getParameter("uname");  
-    String p=request.getParameter("pwd");  
+String fn=request.getParameter("textname");  
+String ln=request.getParameter("fathername");  
+String g=request.getParameter("cgpa"); 
+String un=request.getParameter("per"); 
+String p1=request.getParameter("board");
+String p2=request.getParameter("course");
+String e=request.getParameter("city");
+String c=request.getParameter("state"); 
+String p=request.getParameter("pincode");
+String em=request.getParameter("emailid");
+String d=request.getParameter("dob");
+String m=request.getParameter("mobileno");
           
-    if(LoginDao.validate(n, p)){  
-        HttpSession session = request.getSession();
-        session.setAttribute("uname",n);
-        RequestDispatcher rd=request.getRequestDispatcher("home.jsp");  
-        rd.forward(request,response);  
-    }  
-    else{  
-         out.println("<script type=\"text/javascript\">");
-       out.println("alert('User or password incorrect');");
+try{  
+Class.forName("com.mysql.cj.jdbc.Driver");  
+Connection con=DriverManager.getConnection(  
+"jdbc:mysql://localhost:3306/collegeapp?useSSL=false&verifyServerCertificate=false&allowMultiQueries=true","root","abhi@2821");  
+  
+PreparedStatement ps=con.prepareStatement(  
+"insert into appform values(?,?,?,?,?,?,?,?,?,?,?,?)");  
+  
+ps.setString(1,fn);  
+ps.setString(2,ln);  
+ps.setString(3,g);  
+ps.setString(4,un);
+ps.setString(5,p1);
+ps.setString(6,p2);
+ps.setString(7,e);
+ps.setString(8,c);
+ps.setString(9,p);
+ps.setString(10,em);
+ps.setString(11,d);
+ps.setString(12,m);
+          
+int i=ps.executeUpdate();  
+if(i>0)  
+     out.println("<script type=\"text/javascript\">");
+       out.println("alert('form submitted successfully');");
        out.println("</script>"); 
-        RequestDispatcher rd=request.getRequestDispatcher("index.html");  
-        rd.include(request,response);  
-    }  
+        RequestDispatcher rd=request.getRequestDispatcher("home.jsp");  
+        rd.include(request,response);
           
-    out.close();  
-    }  
- 
-        
-        
-    
+}catch (Exception e2) {System.out.println(e2);}  
+          
+out.close();  
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
