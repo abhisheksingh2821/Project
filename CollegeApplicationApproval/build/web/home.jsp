@@ -25,6 +25,21 @@
     height: 120px;
    
 }
+.div100
+{
+  background-color: red;
+   height:100px;
+  width: 620px;
+
+}.div100 p{
+float: right;
+color: whitesmoke;
+}
+.div100 img{
+  float: left;
+  height: 100px;
+  width: 620px;
+}
 .div1 img
 {
     height: 90px;
@@ -95,8 +110,26 @@ input[type=submit]
   
                </nav>
      </div>
+                   <img src="h1.png" width="1330"  style="opacity:0.7;" usemap="#image-map">
+                  
 
-               
+<map name="image-map">
+    <area target="_blank" alt="" title="" href="https://www.toppr.com/bytes/top-engineering-colleges-in-india/" coords="125,127,299,293" shape="rect">
+    <area target="_blank" alt="" title="" href="https://www.shiksha.com/mba/ranking/top-mba-colleges-in-india/2-2-0-0-0" coords="358,128,531,294" shape="rect">
+    <area target="_blank" alt="" title="" href="https://law.careers360.com/colleges/ranking" coords="589,128,762,294" shape="rect">
+    <area target="_blank" alt="" title="" href="https://www.shiksha.com/mass-communication-media/articles/top-10-mass-communication-colleges-in-india-blogId-13552" coords="817,129,990,293" shape="rect">
+    <area target="_blank" alt="" title="" href="https://collegedunia.com/design-colleges" coords="1051,127,1227,293" shape="rect">
+</map>
+                   <img src="h2.png" width="1330"  style="opacity:0.7;" usemap="#image-map2">
+         
+
+<map name="image-map2">
+    <area target="-blank" alt="" title="" href="https://www.isrgrajan.com/education/du_predictor/" coords="307,8,640,339" shape="rect">
+</map>
+                   <img src="fut2.png" width="1330"  style="opacity:0.7;">
+
+          <img src="connect.jpg"width="1330" style="opacity:0.5;" >
+          
 </body>
     
 </html>

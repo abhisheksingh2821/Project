@@ -3,7 +3,7 @@
   <style>
             body 
             {
-                background-image: url(57.jpg);
+                background-image: url(99.jpg);
                 height:740px;
             }
             
@@ -13,12 +13,6 @@
     width: 1346;
     height: 120px;  
 }
-.div28
-{
-    margin-left: 300;
-     color:red;
-    font-size: 20px;
-}
 
 .div6
 {
@@ -26,6 +20,13 @@
     width: 1346px;
     height: 350px;
 }
+.div24 img
+{
+    height:224;
+    width:244;
+}
+.div24 table{margin-top: 80px;margin-left: 250px;}
+.div24 table td{padding:10px 70px;color:whitesmoke;}
 .div2
 {
     width: 1346px;
@@ -45,6 +46,25 @@ td{padding:2px 75px;font-size:20px;font-family: cursive;}
             </style>
         
 <script type="text/javascript" src="validate.js"></script>
+<script>
+    function ran(){
+       
+        var x = document.getElementById("ten").value;
+        
+        if(x <= 8 && x >= 7){
+            window.location = "c1.html";
+        }
+        else  if(x <= 9 && x >8){
+            window.location = "c2.html";
+        }
+        else if(x <=10 && x> 9){
+            window.location = "c3.html";
+        }
+        else{
+            window.location = "c4.html";
+        }
+    }
+</script>
 </head>
 <body>
                <div class="div1">
@@ -71,10 +91,20 @@ td{padding:2px 75px;font-size:20px;font-family: cursive;}
 
       
            <div class="div3">
-           <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: whitesmoke;margin-top: 0;text-align: center;border-bottom-right-radius:  40px;">User Profile</p>
+           <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: whitesmoke;margin-top: 0;text-align: center;border-bottom-right-radius:  40px;">Colleges For you</p>
            </div>
-<center><form action="userp">  
-        <h2> Enter your Email Id :</h2> <input type="email" name="email" required><br/>  
-
-<input type="submit" value="Show Data" style="background-color:whitesmoke; border-radius:60px;margin-top: 20px;color:red;text-decoration:none;font-size:20px;"/>  
-    </form></center>
+     <div>
+        <h1 style="font-family: cursive; color: whitesmoke">
+            These are the best fit colleges for you based upon your class 10th and 12th score
+        </h1>
+         
+    </div>
+    <div class="div24">
+        <table>
+            <tr><td> <a href="http://www.ssvgi.org/" target="-blank"> <img src="ii2.jpg" ></a></td> <td><a href="https://invertisuniversity.ac.in/" target="-blank">   <img src="ii3.jpg" ></a></td></tr>
+            <tr><td>SSVGI BAREILLY</td><td>INVERTIS UNIVESITY GAYA</td></tr>
+            <tr><td> <a href="http://www.srms.ac.in/" target="-blank">   <img src="ii4.jpg" ></a></td><td> <a href="http://www.rbmi.in/" target="-blank">     <img src="ii5.png" ></a></td></tr>
+            <tr><td>SRMS LUCKNOW</td><td>RBMI DHANBAD</td></tr>
+        </table>
+        
+    </div>

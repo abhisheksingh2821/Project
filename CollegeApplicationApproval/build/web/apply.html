@@ -39,6 +39,25 @@ td{padding:2px 75px;font-size:20px;font-family: cursive;}
             </style>
         
 <script type="text/javascript" src="validate.js"></script>
+<script>
+    function ran(){
+       
+        var x = document.getElementById("ten").value;
+        
+        if(x <= 8 && x >= 7){
+            window.location = "c1.html";
+        }
+        else  if(x <= 9 && x >8){
+            window.location = "c2.html";
+        }
+        else if(x <=10 && x> 9){
+            window.location = "c3.html";
+        }
+        else{
+            window.location = "c4.html";
+        }
+    }
+</script>
 </head>
 <body>
                <div class="div1">
@@ -67,8 +86,10 @@ td{padding:2px 75px;font-size:20px;font-family: cursive;}
            <div class="div3">
            <p style="color: red;font-size: 35px;height: 50px;width:400px;background-color: whitesmoke;margin-top: 0;text-align: center;border-bottom-right-radius:  40px;">Colleges For you</p>
            </div>
-    <div>
-        <h1 style="font-family: cursive; color: whitesmoke">
-            These are the best fit colleges for you based upon your class 10th and 12th score
-        </h1>
-    </div>
+   
+    <center><form>  
+            <h2>Enter your 10th cgpa :</h2> <input type="text" name="ten" id = "ten" required><br/>  
+<br><h2> Enter your 12th percentage:</h2> <input type="text" name="tw" id = "tw" required>
+<br>
+<input type="button" onclick = "ran()" value="Show Colleges" style="background-color:whitesmoke; border-radius:60px;margin-top: 20px;color:red;text-decoration:none;font-size:20px;"/>  
+    </form></center>
