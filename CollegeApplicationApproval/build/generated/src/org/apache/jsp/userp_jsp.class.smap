@@ -1,0 +1,15 @@
+SMAP
+userp_jsp.java
+JSP
+*S JSP
+*F
++ 0 userp.jsp
+userp.jsp
+*L
+5,4:44
+8,73:48
+81:121,3
+82:124
+82,5:125
+86:130
+*E

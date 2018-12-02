@@ -1,10 +1,10 @@
 
 function validate()
 { 
-   if( document.StudentRegistration.textnames.value == "" )
+   if( document.StudentRegistration.textname.value == "" )
    {
      alert( "Please provide your Name!" );
-     document.StudentRegistration.textnames.focus() ;
+     document.StudentRegistration.textname.focus() ;
      return false;
    }
    if( document.StudentRegistration.fathername.value == "" )

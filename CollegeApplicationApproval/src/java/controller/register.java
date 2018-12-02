@@ -66,6 +66,10 @@ ps.setString(8,c);
           
 int i=ps.executeUpdate();  
 if(i>0)  
+    
+     out.println("<script type=\"text/javascript\">");
+       out.println("alert('You are registered successfully');");
+       out.println("</script>"); 
 request.getRequestDispatcher("/index.html").forward(request, response);
       
           

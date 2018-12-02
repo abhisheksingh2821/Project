@@ -20,6 +20,10 @@
         <servlet-name>appform</servlet-name>
         <servlet-class>controller.appform</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>userp</servlet-name>
+        <servlet-class>controller.userp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>appform</servlet-name>
         <url-pattern>/appform</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userp</servlet-name>
+        <url-pattern>/userp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
